@@ -3,26 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VintageCam</title>
+  <title>A Memory</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="camera-body">
-    <div class="camera-top">
-      <div class="lens"></div>
-      <div class="viewfinder"></div>
-      <div class="flash"></div>
-    </div>
-    <div class="camera-screen">
-      <iframe src="pages/gallery.html" id="main-frame"></iframe>
-    </div>
-    <div class="camera-controls">
-      <button onclick="changePage('gallery.html')" class="cam-btn">📸 Gallery</button>
-      <button onclick="changePage('about.html')" class="cam-btn">🔍 About</button>
-      <button onclick="changePage('contact.html')" class="cam-btn">📞 Contact</button>
+  <div class="memory-frame">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1 class="title">A Memory</h1>
+      <p class="subtitle">Click a moment to relive...</p>
+      <div class="buttons">
+        <button onclick="loadPage('gallery.html')">🌅 Gallery</button>
+        <button onclick="loadPage('about.html')">📖 About</button>
+        <button onclick="loadPage('contact.html')">✉️ Contact</button>
+      </div>
+      <iframe id="viewer" src="pages/gallery.html"></iframe>
     </div>
   </div>
-  <audio id="shutter-sound" src="assets/shutter.mp3" preload="auto"></audio>
   <script src="script.js"></script>
 </body>
 </html>
