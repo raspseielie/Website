@@ -1,6 +1,11 @@
-function loadPage(page) {
-  const frame = document.getElementById('frame');
-  const sound = new Audio('assets/shutter.mp3');
+function changePage(page) {
+  const frame = document.getElementById('main-frame');
+  const sound = document.getElementById('shutter-sound');
+  sound.currentTime = 0;
   sound.play();
-  frame.src = 'pages/' + page;
+
+  // Add delay for realism
+  setTimeout(() => {
+    frame.src = 'pages/' + page;
+  }, 200);
 }
